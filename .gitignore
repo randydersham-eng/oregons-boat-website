@@ -1,0 +1,4 @@
+.DS_Store
+# Ignore temporary scratch files or local configurations if any
+*.tmp
+*.log

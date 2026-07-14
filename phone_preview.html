@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertical Phone Preview — OREGON'S BOAT</title>
+  <style>
+    :root {
+      --color-bg: #0d0f12;
+      --color-card-bg: #14171d;
+      --color-primary: #d4af37;
+      --color-text: #f3f4f6;
+      --color-text-muted: #9ca3af;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.02) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(59, 130, 246, 0.02) 0%, transparent 40%);
+    }
+
+    .preview-header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .preview-header h1 {
+      font-size: 1.8rem;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+    }
+
+    .preview-header p {
+      font-size: 0.95rem;
+      color: var(--color-text-muted);
+    }
+
+    .control-panel {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 2rem;
+      max-width: 600px;
+    }
+
+    .btn {
+      background-color: var(--color-card-bg);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--color-text-muted);
+      padding: 0.5rem 1.2rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn:hover {
+      border-color: var(--color-primary);
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+
+    .btn.active {
+      background-color: var(--color-primary);
+      color: #000000;
+      border-color: var(--color-primary);
+      font-weight: 600;
+    }
+
+    /* Device Mockup Frame */
+    .device-container {
+      position: relative;
+      width: 414px; /* Phone frame width */
+      height: 868px; /* Phone frame height */
+      border: 12px solid #2d2d30;
+      border-radius: 50px;
+      background-color: #000000;
+      box-shadow: 
+        0 25px 50px -12px rgba(0, 0, 0, 0.9),
+        0 0 40px rgba(212, 175, 55, 0.03);
+      padding: 12px 10px 10px 10px; /* Inside border margins */
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* Notch Mockup */
+    .device-notch {
+      position: absolute;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 150px;
+      height: 25px;
+      background-color: #2d2d30;
+      border-bottom-left-radius: 18px;
+      border-bottom-right-radius: 18px;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .device-notch::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #1a1a1c;
+      margin-right: 35px;
+    }
+
+    .device-notch::after {
+      content: '';
+      width: 40px;
+      height: 4px;
+      border-radius: 2px;
+      background: #0f0f10;
+    }
+
+    /* Simulated Screen Frame */
+    .device-screen {
+      width: 100%;
+      height: 100%;
+      border-radius: 36px;
+      overflow: hidden;
+      background-color: #0d0f12;
+      position: relative;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .preview-iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background-color: #0d0f12;
+    }
+
+    /* Bottom Home Indicator */
+    .home-indicator {
+      position: absolute;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 4px;
+      background-color: rgba(255, 255, 255, 0.4);
+      border-radius: 2px;
+      z-index: 10;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="preview-header">
+    <h1>Mobile Phone Preview</h1>
+    <p>Simulating iPhone Viewport (390px × 844px) — Custom local layout validator</p>
+  </div>
+
+  <div class="control-panel">
+    <button class="btn active" onclick="loadPage('index.html', this)">Home</button>
+    <button class="btn" onclick="loadPage('story.html', this)">Story</button>
+    <button class="btn" onclick="loadPage('timeline.html', this)">Timeline</button>
+    <button class="btn" onclick="loadPage('boatshow.html', this)">Boat Show</button>
+    <button class="btn" onclick="loadPage('awards.html', this)">Awards</button>
+    <button class="btn" onclick="loadPage('cart.html', this)">Cart</button>
+    <button class="btn" style="border-style: dashed; margin-left: 10px;" onclick="reloadIframe()">🔄 Reset</button>
+  </div>
+
+  <!-- Simulated Device -->
+  <div class="device-container">
+    <div class="device-notch"></div>
+    <div class="device-screen">
+      <iframe 
+        id="previewIframe" 
+        class="preview-iframe" 
+        src="index.html"
+        allow="autoplay; fullscreen"
+        webkitallowfullscreen 
+        mozallowfullscreen 
+        allowfullscreen>
+      </iframe>
+      <div class="home-indicator"></div>
+    </div>
+  </div>
+
+  <script>
+    const iframe = document.getElementById('previewIframe');
+
+    function loadPage(url, buttonEl) {
+      iframe.src = url;
+      
+      // Update active button state
+      const buttons = document.querySelectorAll('.control-panel .btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      if (buttonEl) {
+        buttonEl.classList.add('active');
+      }
+    }
+
+    function reloadIframe() {
+      iframe.contentWindow.location.reload();
+    }
+
+    // Monitor iframe navigation to update active buttons if they navigate inside the previewer
+    iframe.addEventListener('load', () => {
+      try {
+        const path = iframe.contentWindow.location.pathname;
+        const pageName = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
+        
+        const buttons = document.querySelectorAll('.control-panel .btn');
+        buttons.forEach(btn => {
+          const onclickAttr = btn.getAttribute('onclick');
+          if (onclickAttr && onclickAttr.includes(pageName)) {
+            buttons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+          }
+        });
+      } catch (e) {
+        // Handle cross-origin errors if they navigate externally, though should be internal
+      }
+    });
+  </script>
+
+</body>
+</html>

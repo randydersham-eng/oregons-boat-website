@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SHOPPING CART — OREGON'S BOAT</title>
+  <meta name="description" content="Oregon's Boat online store shopping cart placeholder. Store and merchandise coming soon.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- FUTURE INTEGRATION:
+       To activate a fully functional cart in the future, we can simply drop in a widget script like Snipcart:
+       <script async src="https://cdn.snipcart.com/themes/v3.0.31/default/snipcart.js"></script>
+       <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.31/default/snipcart.css" />
+       <div id="snipcart" data-api-key="YOUR_SNIPCART_API_KEY_HERE" hidden></div>
+  -->
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo-link">
+        <img src="assets/Oregon_Boat_Title.png" alt="OREGON'S BOAT" class="logo-img">
+      </a>
+      <button class="burger-menu" aria-label="Toggle Menu">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </button>
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="story.html" class="nav-link">Story</a>
+        <a href="timeline.html" class="nav-link">Timeline</a>
+        <a href="boatshow.html" class="nav-link">Boat Show</a>
+        <a href="awards.html" class="nav-link">Awards</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="cart-card">
+      <div class="cart-icon">🛒</div>
+      <h2>Your Shopping Cart is Empty</h2>
+      <p class="cart-empty-text" style="color: var(--color-text-muted); margin-bottom: 2rem;">
+        The Oregon's Boat online shop is currently being prepared. In the future, you will be able to purchase the documentary film download, DVD copies, and merchandise directly from this page.
+      </p>
+      
+      <div style="background-color: var(--color-bg-offset); border: 1px solid var(--color-card-border); padding: 1.5rem; border-radius: 8px; margin-bottom: 2.5rem; text-align: left;">
+        <h3 style="font-size: 1.1rem; color: #ffffff; margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em;">
+          Future Shop Offerings:
+        </h3>
+        <ul style="list-style: none; padding-left: 0; font-size: 0.95rem; color: var(--color-text-muted);">
+          <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+            💿 <span><strong>Oregon's Boat Documentary (DVD Edition)</strong></span>
+          </li>
+          <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+            🎥 <span><strong>Digital Video Download & Stream Access</strong></span>
+          </li>
+          <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+            👕 <span><strong>McKenzie River Drift Boat Festival T-Shirts</strong></span>
+          </li>
+          <li style="display: flex; align-items: center; gap: 0.5rem;">
+            📖 <span><strong>Historical Drift Boat Blueprints & Guides</strong></span>
+          </li>
+        </ul>
+      </div>
+
+      <a href="index.html" class="btn-primary">Return to Homepage</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-top-row">
+        <img src="assets/Oregon_Boat_Title.png" alt="OREGON'S BOAT Logo" class="footer-logo">
+        <p class="footer-info">
+          OREGON’S BOAT is a 501(c)(3) nonprofit corporation organized for the benefit of the public with EIN# 92-2486892
+        </p>
+      </div>
+      <div class="footer-contact">
+        For a custom presentation for your organization, text Randy Dersham at <a href="sms:+15412853676">541 285 3676</a>
+      </div>
+      <a href="https://www.facebook.com/Eddyline.Entertainment" target="_blank" rel="noopener noreferrer" class="footer-facebook">
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/>
+        </svg>
+        <span>Follow on Facebook</span>
+      </a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
