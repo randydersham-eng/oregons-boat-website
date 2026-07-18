@@ -56,6 +56,26 @@
           "Best Short Film - Environmental Film & Screenplay Festival",
           "Best First Time Director - East Village NY Film Festival"
         ]
+      },
+      {
+        "@type": "Article",
+        "@id": "https://oregonsboat.org/#story",
+        "headline": "The Story of Oregon's Boat: McKenzie River Drift Boat Evolution",
+        "description": "The 5-act story of the McKenzie River Drift Boat and its transition from local river utility to an international white-water icon.",
+        "url": "https://oregonsboat.org/#story",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Oregon's Boat",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://oregonsboat.org/assets/Oregon_Boat_Title.png"
+          }
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Brittany Mason",
+          "jobTitle": "Author & Photojournalist"
+        }
       }
     ]
   }
@@ -77,7 +97,7 @@
       </button>
       <nav class="nav-menu">
         <a href="index.html" class="nav-link">Home</a>
-        <a href="story.html" class="nav-link">Story</a>
+        <a href="#story" class="nav-link">Story</a>
         <a href="timeline.html" class="nav-link">Timeline</a>
         <a href="boatshow.html" class="nav-link">Boat Show</a>
         <a href="awards.html" class="nav-link">Awards</a>
@@ -127,86 +147,139 @@
   <!-- Main Content -->
   <main id="main-content">
 
-    <!-- Screenings Section -->
-    <section class="screenings-section">
-      <h2>Documentary Screenings</h2>
-      <p style="margin-bottom: 2rem;">Catch upcoming and past screenings of the film across Oregon and at film festivals nationwide:</p>
-      
-      <div class="screenings-grid">
-        <!-- Screening Card 1 -->
-        <div class="screening-card">
-          <div class="screening-date">Aug. 15-16, 2025</div>
-          <div class="screening-venue">Wild Rivers Film Festival</div>
-          <div class="screening-address">Brookings, Oregon</div>
-          <div class="screening-time">Festival Showtime</div>
+    <!-- Story Section (Integrated on Home Page) -->
+    <section id="story" class="story-section" style="padding-top: 1rem;">
+      <div class="story-header">
+        <h2 style="font-size: 2.2rem; color: var(--color-heading); margin-bottom: 0.8rem;">The Story of Oregon's Boat</h2>
+        <p style="font-size: 1.15rem; color: var(--color-text-muted);">
+          Our documentary follows the linear evolution of the McKenzie River Drift Boat in five acts:
+        </p>
+      </div>
+
+      <!-- Acts Grid / List -->
+      <div class="acts-container">
+        <!-- Act 1 -->
+        <div class="act-card">
+          <div>
+            <div class="act-num">Act I</div>
+            <h3 class="act-title">John West &amp; The Bathtub Design</h3>
+            <div class="act-body">
+              <p>
+                The story begins with <strong>John West</strong>, who widened and shortened the boats in use during the 1920s to make them smaller and easier to manage. This change not only made the boat more efficient for fishing but also doubled the earning potential for river guides by providing space for two anglers.
+              </p>
+              <p>
+                His version, affectionately described as a <em>“bathtub with oarlocks,”</em> became the go-to design for more than 15 years.
+              </p>
+            </div>
+          </div>
         </div>
 
-        <!-- Screening Card 2 -->
-        <div class="screening-card">
-          <div class="screening-date">Apr. 25, 2025</div>
-          <div class="screening-venue">Vida McKenzie Community Center</div>
-          <div class="screening-address">90377 Thomson Ln, Vida, OR 97488</div>
-          <div class="screening-time">7:00 PM showtime</div>
+        <!-- Act 2 -->
+        <div class="act-card">
+          <div>
+            <div class="act-num">Act II</div>
+            <h3 class="act-title">Veltie Pruitt &amp; Prince Helfrich</h3>
+            <div class="act-body">
+              <p>
+                Next up - two pioneering river guides: <strong>Veltie Pruitt and Prince Helfrich</strong> were among the first to navigate many of Oregon’s wild rivers from top to bottom. Their exploration helped lay the groundwork for what would become the McKenzie River Drift Boat.
+              </p>
+              <p>
+                The early version of the boat was lightweight, made with a board-and-batten construction, and could easily be loaded onto a car. It carried just a rower and one passenger—ideal for exploring the rugged waters they were mapping.
+              </p>
+            </div>
+          </div>
         </div>
 
-        <!-- Screening Card 3 -->
-        <div class="screening-card">
-          <div class="screening-date">Apr. 5, 2025</div>
-          <div class="screening-venue">Oregon Coast Film Festival</div>
-          <div class="screening-address">The Egyptian Theater, 229 S Broadway, Coos Bay, OR 97420</div>
-          <div class="screening-time">Closing Film Showtime</div>
+        <!-- Act 3 -->
+        <div class="act-card">
+          <div>
+            <div class="act-num">Act III</div>
+            <h3 class="act-title">Tom Kaarhus &amp; Plywood Kits</h3>
+            <div class="act-body">
+              <p>
+                In the next chapter, we meet <strong>Tom Kaarhus</strong>. Tom was a boat-building professional who applied his knowledge and problem-solving skills to modify the boat John West had created ten years earlier. This modification made it the boat used by guides and river runners for nearly twenty years.
+              </p>
+              <p>
+                With the introduction of exterior plywood, Tom was able to develop a free-form boat-building method using pre-cut parts in kits that enthusiasts could assemble at home. Soon, the square-ended drift boat was everywhere on the river.
+              </p>
+            </div>
+          </div>
         </div>
 
-        <!-- Screening Card 4 -->
-        <div class="screening-card">
-          <div class="screening-date">Mar. 28, 2025</div>
-          <div class="screening-venue">Upper McKenzie Community Center</div>
-          <div class="screening-address">54745 McKenzie River Dr, Blue River, OR 97413</div>
-          <div class="screening-time">7:00 PM showtime</div>
+        <!-- Act 4 -->
+        <div class="act-card">
+          <div>
+            <div class="act-num">Act IV</div>
+            <h3 class="act-title">Woodie Hindman &amp; The Double-Ender</h3>
+            <div class="act-body">
+              <p>
+                The evolution continued with <strong>Woodie Hindman</strong>, a former apprentice of Kaarhus. He brought innovation to the boat’s design by building the first double-ended drift boat—an idea sparked by a near-disaster on the Middle Fork of the Salmon River.
+              </p>
+              <p>
+                His new design improved performance in rough water and became the most visible landmark in the boat’s development.
+              </p>
+            </div>
+          </div>
         </div>
 
-        <!-- Screening Card 5 -->
-        <div class="screening-card">
-          <div class="screening-date">Jan. 26, 2025</div>
-          <div class="screening-venue">Oregon Documentary Film Festival</div>
-          <div class="screening-address">Clinton Street Theater, 2522 SE Clinton St, Portland, OR 97202</div>
-          <div class="screening-time">4:00 PM showtime start</div>
+        <!-- Act 5 -->
+        <div class="act-card">
+          <div>
+            <div class="act-num">Act V</div>
+            <h3 class="act-title">Grand Canyon Exploration &amp; Advocacy</h3>
+            <div class="act-body">
+              <p>
+                The story then takes an unexpected turn to the Grand Canyon, where conservationist <strong>Martin Litton</strong>, inspired by a ride in a McKenzie River drift boat during a White Water Parade, commissioned two boats for trips down the Colorado River.
+              </p>
+              <p>
+                These boats played a key role in his environmental advocacy, even appearing in the Sierra Club’s famous campaign to preserve the Grand Canyon during the 1960s, and eventually assisted in creating his commercial guiding business on the Colorado.
+              </p>
+            </div>
+          </div>
         </div>
 
-        <!-- Screening Card 6 -->
-        <div class="screening-card">
-          <div class="screening-date">Jan. 5, 2025</div>
-          <div class="screening-venue">Upper McKenzie Community Center</div>
-          <div class="screening-address">54745 McKenzie River Dr, Blue River, OR</div>
-          <div class="screening-time">7:00 PM showtime</div>
+        <!-- Act 6 (Legacy) -->
+        <div class="act-card">
+          <div>
+            <div class="act-num">The Legacy</div>
+            <h3 class="act-title">Smithsonian Representation &amp; The Bicentennial</h3>
+            <div class="act-body">
+              <p>
+                Finally, the documentary brings it home with the boat’s lasting legacy. After decades of innovation and adventure, the McKenzie River Drift Boat was chosen to represent Oregon in the nation’s <strong>1976 Bicentennial exhibition on the National Mall</strong>, sponsored by the National Park Service and the Smithsonian Museum.
+              </p>
+              <p>
+                Master boatbuilder Keith Steele and his team crafted the now-iconic vessel in just a few days, cementing its place in both regional and national history.
+              </p>
+            </div>
+          </div>
         </div>
 
-        <!-- Screening Card 7 -->
-        <div class="screening-card">
-          <div class="screening-date">Nov. 24, 2024</div>
-          <div class="screening-venue">Wildish Community Theater</div>
-          <div class="screening-address">630 Main Street, Springfield, OR 97477</div>
-          <div class="screening-time">6:00 PM showtime</div>
+        <!-- Film Reflection -->
+        <div class="act-card" style="padding: 3rem;">
+          <h3 style="margin-bottom: 1.5rem; font-size: 1.6rem; color: var(--color-heading);">A Living Legacy</h3>
+          <p style="font-size: 1.1rem; line-height: 1.7; color: var(--color-text); font-weight: 300;">
+            But perhaps the most compelling aspect of Oregon’s Boat is what comes after the credits roll. The final act of the film moves into the post-1950s era—a time when many of the key players are still living, and the story is still unfolding.
+          </p>
+          <p style="font-size: 1.1rem; line-height: 1.7; color: var(--color-text); font-weight: 300; margin-bottom: 0;">
+            The McKenzie River Drift Boat isn’t just a relic of the past; it’s part of an ongoing narrative shaped by today’s guides, builders, and river communities. The film invites viewers to not only reflect on where this boat came from but to ask, <em>“What comes next?”</em> In that way, <strong>Oregon’s Boat</strong> isn’t just a documentary—it’s an open invitation to be part of a living legacy.
+          </p>
         </div>
+      </div>
 
-        <!-- Screening Card 8 -->
-        <div class="screening-card">
-          <div class="screening-date">Nov. 19, 2024</div>
-          <div class="screening-venue">Columbia River Maritime Museum</div>
-          <div class="screening-address">1792 Marine Dr, Astoria, OR 97103</div>
-          <div class="screening-time">11:00 AM showtime</div>
-        </div>
-
-        <!-- Screening Card 9 -->
-        <div class="screening-card">
-          <div class="screening-date">Nov. 17, 2024</div>
-          <div class="screening-venue">Star Cinema</div>
-          <div class="screening-address">350 N 3rd Ave, Stayton, OR 97383</div>
-          <div class="screening-time">7:00 PM showtime</div>
+      <!-- Biography Panel -->
+      <div class="bio-section" style="grid-template-columns: 1fr; max-width: 800px; margin: 0 auto 3rem auto;">
+        <div class="bio-content">
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.3rem;">Brittany Mason</h3>
+          <div class="bio-role">Author / Photojournalist &amp; Project Manager</div>
+          <p class="bio-text">
+            Brittany Mason is a fine art landscape and portrait photographer located in Blue River, Oregon. She completed her Master of Fine Arts degree from the Academy of Art University in 2022 and received her Bachelor's of Science degree in Photography from the Art Institute of Philadelphia in 2014.
+          </p>
+          <p class="bio-text">
+            Currently she is a Photojournalist and Project Manager for the McKenzie Community Partnership as she continues her explorations of the western landscapes. Brittany is passionate about using her camera as a tool for connection between humans and nature. Through her work, she embodies the essence of Mother Earth to give a voice to the landscapes that have been silenced and destroyed by the hand of man. In her free time, Brittany enjoys live music, hiking, reading, crafting, and watching Star Trek.
+          </p>
         </div>
       </div>
     </section>
-
 
   </main>
 

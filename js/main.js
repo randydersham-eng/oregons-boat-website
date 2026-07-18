@@ -25,13 +25,27 @@ document.addEventListener('DOMContentLoaded', () => {
     if (
       currentPath === linkPath || 
       (linkPath === 'index.html' && (currentPath === '/' || currentPath.endsWith('/index.html') || currentPath === '')) ||
-      (currentPath.includes(linkPath) && linkPath !== 'index.html')
+      (linkPath !== 'index.html' && !linkPath.includes('#') && currentPath.includes(linkPath))
     ) {
       link.classList.add('active');
       link.setAttribute('aria-current', 'page');
     } else {
       link.classList.remove('active');
       link.removeAttribute('aria-current');
+    }
+
+    // Smooth scroll for Story anchor link on home page
+    if (linkPath.includes('#story')) {
+      link.addEventListener('click', (e) => {
+        const isHomePage = currentPath === '/' || currentPath.endsWith('/index.html') || currentPath === '';
+        if (isHomePage) {
+          e.preventDefault();
+          const storyElem = document.getElementById('story');
+          if (storyElem) {
+            storyElem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      });
     }
   });
 
