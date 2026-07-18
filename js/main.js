@@ -28,8 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
       (currentPath.includes(linkPath) && linkPath !== 'index.html')
     ) {
       link.classList.add('active');
+      link.setAttribute('aria-current', 'page');
     } else {
       link.classList.remove('active');
+      link.removeAttribute('aria-current');
     }
   });
 });

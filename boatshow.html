@@ -3,18 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BOAT SHOW — OREGON'S BOAT</title>
-  <meta name="description" content="Get event details for the annual McKenzie River Wooden Boat Festival held at Eagle Rock Lodge, Vida, Oregon.">
+  <title>MCKENZIE RIVER WOODEN BOAT FESTIVAL 2026 — OREGON'S BOAT</title>
+  <meta name="description" content="Get event details for the annual McKenzie River Wooden Boat Festival held Saturday, April 25, 2026 at Eagle Rock Lodge, Vida, Oregon.">
+  <link rel="canonical" href="https://oregonsboat.org/boatshow.html">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://oregonsboat.org/boatshow.html">
+  <meta property="og:title" content="McKenzie River Wooden Boat Festival 2026 — Eagle Rock Lodge">
+  <meta property="og:description" content="Join us Saturday, April 25, 2026 for the McKenzie River Wooden Boat Festival at Eagle Rock Lodge, Vida, Oregon. Free admission and boat registration!">
+  <meta property="og:image" content="https://oregonsboat.org/assets/McKenzie_Driftboat_Festival.jpg">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://oregonsboat.org/boatshow.html">
+  <meta name="twitter:title" content="McKenzie River Wooden Boat Festival 2026 — Eagle Rock Lodge">
+  <meta name="twitter:description" content="Join us Saturday, April 25, 2026 for the McKenzie River Wooden Boat Festival at Eagle Rock Lodge, Vida, Oregon. Free admission and boat registration!">
+  <meta name="twitter:image" content="https://oregonsboat.org/assets/McKenzie_Driftboat_Festival.jpg">
+
+  <!-- JSON-LD Event Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "McKenzie River Wooden Boat Festival 2026",
+    "startDate": "2026-04-25T10:00:00-07:00",
+    "endDate": "2026-04-25T16:00:00-07:00",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "location": {
+      "@type": "Place",
+      "name": "Eagle Rock Lodge",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "49195 McKenzie Hwy",
+        "addressLocality": "Vida",
+        "addressRegion": "OR",
+        "postalCode": "97488",
+        "addressCountry": "US"
+      }
+    },
+    "image": [
+      "https://oregonsboat.org/assets/McKenzie_Driftboat_Festival.jpg"
+    ],
+    "description": "The annual McKenzie River Wooden Boat Festival featuring historic drift boats, river dories, and river guide lore on the lawns at Eagle Rock Lodge.",
+    "offers": {
+      "@type": "Offer",
+      "url": "https://oregonsboat.org/boatshow.html",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "Oregon's Boat",
+      "url": "https://oregonsboat.org/"
+    }
+  }
+  </script>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- Navigation Header -->
   <header>
     <div class="nav-container">
       <a href="index.html" class="logo-link">
-        <img src="assets/Oregon_Boat_Title.png" alt="OREGON'S BOAT" class="logo-img">
+        <img src="assets/Oregon_Boat_Title.png" alt="OREGON'S BOAT" class="logo-img" width="280" height="108">
       </a>
       <button class="burger-menu" aria-label="Toggle Menu">
         <span class="burger-line"></span>
@@ -32,7 +89,7 @@
   </header>
 
   <!-- Main Content -->
-  <main>
+  <main id="main-content">
     <div class="boatshow-header">
       <h1>McKenzie River Wooden Boat Festival</h1>
       <p style="font-size: 1.2rem; color: var(--color-primary); font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em;">
@@ -41,7 +98,7 @@
     </div>
 
     <!-- Main Banner Image -->
-    <img src="assets/McKenzie_Driftboat_Festival.jpg" alt="McKenzie River Wooden Boat Festival lawn at Eagle Rock Lodge" class="boatshow-hero-img">
+    <img src="assets/McKenzie_Driftboat_Festival.jpg" alt="McKenzie River Wooden Boat Festival lawn at Eagle Rock Lodge" class="boatshow-hero-img" width="1200" height="400" loading="eager" decoding="async">
 
     <!-- Grid content -->
     <div class="boatshow-content">
@@ -103,7 +160,7 @@
   <footer>
     <div class="footer-container">
       <div class="footer-top-row">
-        <img src="assets/Oregon_Boat_Title.png" alt="OREGON'S BOAT Logo" class="footer-logo">
+        <img src="assets/Oregon_Boat_Title.png" alt="OREGON'S BOAT Logo" class="footer-logo" width="280" height="108" loading="lazy" decoding="async">
         <p class="footer-info">
           OREGON’S BOAT is a 501(c)(3) nonprofit corporation organized for the benefit of the public with EIN# 92-2486892
         </p>
