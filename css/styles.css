@@ -427,6 +427,49 @@ footer {
   margin: 0 auto;
 }
 
+.video-banner-header {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 2.2rem auto;
+  color: #ffffff;
+}
+
+.video-banner-title {
+  font-family: 'Antonio', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #d4af37; /* Warm metallic bronze-gold */
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.85);
+  margin-bottom: 0.8rem;
+  line-height: 1.25;
+}
+
+.video-banner-subhead {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #f4f4f4;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+}
+
+.video-banner-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(20, 16, 12, 0.85);
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  color: #d4af37;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.45rem 1.4rem;
+  border-radius: 30px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+}
+
 .video-banner-content .video-container {
   margin-bottom: 0;
 }
@@ -883,6 +926,16 @@ footer {
 @media (max-width: 768px) {
   .video-banner-section {
     padding: 2rem 1rem;
+  }
+  .video-banner-title {
+    font-size: 1.8rem;
+  }
+  .video-banner-subhead {
+    font-size: 1.05rem;
+  }
+  .video-banner-meta {
+    font-size: 0.85rem;
+    padding: 0.35rem 1rem;
   }
   .video-banner-laurels {
     flex-wrap: wrap;
